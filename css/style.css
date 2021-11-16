@@ -1,0 +1,11 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #32a093 0%,
+        #32a093 15%,
+        #dfe0d9 15%,
+        #dfe0d9 100%
+    );
+}
+
