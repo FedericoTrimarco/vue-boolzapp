@@ -67,7 +67,8 @@ footer input{
 p{
     margin-top: auto;
 }
-/* HOVER */
+
+/**** HOVER ****/
 .contacts .contact:hover{
     background-color: #ccc;
 }
