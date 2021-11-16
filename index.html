@@ -22,7 +22,7 @@
         <div class="container-fluid h-100">
             <div class="row h-100 overflow-auto">
                              <!-- ASIDE -->
-                <aside class="col-4  border-end d-flex flex-column">
+                <aside class="col-4 h-100 border-end d-flex flex-column">
                     <div class="row">
                         <div class="col-6  d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
@@ -49,12 +49,12 @@
                             <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
                         </div>
                     </div>
-                    <div class="row users flex-column flex-grow-1">
-                        <div v-for="(contact, index) in contacts" class="col-12  border-bottom d-flex align-items-center p-3">
+                    <ul class="row users flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
+                        <li v-for="(contact, index) in contacts" class="col-12  border-bottom d-flex align-items-center p-3">
                             <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
                             <h4>{{contact.name}}</h3>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     
                 </aside>
                             <!-- MAIN -->
