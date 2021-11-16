@@ -23,3 +23,23 @@ body {
     height: 95%;
     width: 80%;
 }
+
+/* NOTIFICATION */
+.notifications{
+    background-color: #a2dffe;
+}
+.notifications i{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #a2dffe;
+}
+/* SEARCH */
+.search{
+    background-color: #fffbfb;
+}
+.search button{
+    border: none;
+    padding: 5px 40px;
+}
