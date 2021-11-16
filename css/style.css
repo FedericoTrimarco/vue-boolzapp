@@ -1,3 +1,8 @@
+/* UTILITIES */
+.bord-black{
+    border: 1px solid black;
+}
+/* GENERAL */
 body {
     height: 100vh;
     background-image: linear-gradient(
@@ -7,5 +12,14 @@ body {
         #dfe0d9 15%,
         #dfe0d9 100%
     );
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/*  */
 
+/* CONTAINER */
+.container-w-app{
+    height: 95%;
+    width: 80%;
+}
