@@ -1,4 +1,7 @@
 /* GENERAL */
+*{
+    font-family: 'Lato', sans-serif;
+}
 body {
     height: 100vh;
     background-image: linear-gradient(
