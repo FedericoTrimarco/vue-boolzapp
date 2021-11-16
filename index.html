@@ -19,9 +19,9 @@
 <body>
         <!-- GENERAL CONTAINER -->
     <div class="container-w-app bg-white">
-        <div class="container-fluid">
-            <div class="row">
-                <aside class="col-4 bord-black">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <aside class="col-4 bord-black border-end d-flex flex-column">
                     <div class="row">
                         <div class="col-6 bord-black d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
@@ -48,12 +48,19 @@
                             <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
                         </div>
                     </div>
+                    <div class="row users flex-grow-1 flex-column flex-grow-1">
+                        <div v-for="(contact, index) in contacts" class="col-12 bord-black border-bottom d-flex align-items-center p-3">
+                            <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" alt="Federico Trimarco">
+                            <h4>{{contact.name}}</h3>
+                        </div>
+                    </div>
+                    
                 </aside>
-                <section class="col-8 bord-black d-flex flex-column">
+                <section class="col-8 bord-black d-flex flex-column h-100">
                     <header class="row">
                         <div class="col-3 bord-black d-flex align-items-center p-3">
-                            <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
-                            <h4>Federico Trimarco</h3>
+                            <img class="w-25 rounded-circle me-2" src="./img/avatar_1.jpg" alt="Michele">
+                            <h4>Michele</h4>
                         </div>
                         <div class="col-9 text-black-50 bord-black d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-search"></i>
@@ -61,15 +68,25 @@
                             <i class="fs-4 fas fa-ellipsis-v"></i>
                         </div>
                     </header>
-                    <main class="row bord-black flex-grow-1 h-100">
-                        <div class="col-12 overflow-auto">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim placeat possimus, dicta maiores facere voluptates esse deleniti aspernatur vitae a porro explicabo corporis quod dolorem nisi illum eveniet laboriosam exercitationem.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim placeat possimus, dicta maiores facere voluptates esse deleniti aspernatur vitae a porro explicabo corporis quod dolorem nisi i
+                    <main class="row bord-black flex-grow-1 overflow-auto chat">
+                        <div>
+                            
+                          
                         </div>
                     </main>
-                    <footer class="row bord-black">
-                        <div class="col-12 p-3">
-                            efefefe
+                    <footer class="row bord-black ">
+                        <div class="col-12 flex-shrink-1 footer-message">
+                            <div class="row">
+                                <div class="col-2 bord-black">
+                                    wfwfwfwfw
+                                </div>
+                                <div class="col-8 bord-black">
+                                    wfwfwfwfw
+                                </div>
+                                <div class="col-2 bord-black">
+                                    wfwfwfwfw
+                                </div>
+                            </div>
                         </div>
                     </footer>
                 </section>

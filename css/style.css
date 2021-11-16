@@ -43,3 +43,12 @@ body {
     border: none;
     padding: 5px 40px;
 }
+/* USERS */
+.users img{
+    width: 15%;
+}
+/* MAIN */
+.chat{
+    background-image: url('../img/mine.jpg');
+}
+/* FOOTER */
