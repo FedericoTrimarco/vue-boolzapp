@@ -68,3 +68,6 @@ p{
     margin-top: auto;
 }
 /* HOVER */
+.contacts .contact:hover{
+    background-color: #ccc;
+}
