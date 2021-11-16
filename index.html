@@ -16,25 +16,26 @@
     <title>BOOLZAP</title>
 </head>
 </head>
-<body>
+<body class="d-flex justify-content-center align-items-center">
         <!-- GENERAL CONTAINER -->
     <div class="container-w-app bg-white">
         <div class="container-fluid h-100">
-            <div class="row h-100">
-                <aside class="col-4 bord-black border-end d-flex flex-column">
+            <div class="row h-100 overflow-auto">
+                             <!-- ASIDE -->
+                <aside class="col-4  border-end d-flex flex-column">
                     <div class="row">
-                        <div class="col-6 bord-black d-flex align-items-center p-3">
+                        <div class="col-6  d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
                             <h4>Federico Trimarco</h3>
                         </div>
-                        <div class="text-black-50 col-6 bord-black d-flex justify-content-end align-items-center">
+                        <div class="text-black-50 col-6  d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-circle-notch"></i>
                             <i class="fs-4 mx-4 fas fa-comment-alt"></i>
                             <i class="fs-4 fas fa-ellipsis-v"></i>
                         </div>
                     </div>
                     <div class="row notifications">
-                        <div class="col-12 d-flex align-items-center bord-black p-3">
+                        <div class="col-12 d-flex align-items-center p-3">
                             <i class="bg-light rounded-circle fs-2 fas fa-bell-slash"></i>
                             <div class="ms-2 notification-text-icon">
                                 <h5>Ricevi notifiche di nuovi messaggi</h5>
@@ -42,49 +43,58 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row search">
-                        <div class="col-12 bord-black p-2 d-flex">
+                    <div class="row search py-3">
+                        <div class="col-12  p-2 d-flex">
                             <button class="bg-white border border-1"><i class="fas fa-search"></i></button>
                             <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
                         </div>
                     </div>
-                    <div class="row users flex-grow-1 flex-column flex-grow-1">
-                        <div v-for="(contact, index) in contacts" class="col-12 bord-black border-bottom d-flex align-items-center p-3">
-                            <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" alt="Federico Trimarco">
+                    <div class="row users flex-column flex-grow-1">
+                        <div v-for="(contact, index) in contacts" class="col-12  border-bottom d-flex align-items-center p-3">
+                            <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
                             <h4>{{contact.name}}</h3>
                         </div>
                     </div>
                     
                 </aside>
-                <section class="col-8 bord-black d-flex flex-column h-100">
+                            <!-- MAIN -->
+                <section class="col-8  d-flex flex-column h-100">
                     <header class="row">
-                        <div class="col-3 bord-black d-flex align-items-center p-3">
+                        <div class="col-3  d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_1.jpg" alt="Michele">
-                            <h4>Michele</h4>
+                            <div class="ms-2 notification-text-icon">
+                               <h4>{{contacts[0].name}}</h5>
+                               <span class="text-black-50 fw-bold">{{contacts[0].messages[0].date}}</span>
+                            </div>
                         </div>
-                        <div class="col-9 text-black-50 bord-black d-flex justify-content-end align-items-center">
+                        <div class="col-9 text-black-50  d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-search"></i>
                             <i class="fs-4 mx-4 fas fa-paperclip"></i>
                             <i class="fs-4 fas fa-ellipsis-v"></i>
                         </div>
                     </header>
-                    <main class="row bord-black flex-grow-1 overflow-auto chat">
-                        <div>
-                            
-                          
+                    <main class="row flex-column flex-grow-1 overflow-auto chat">
+                        <div class="col-4 align-self-end m-5 my-message d-flex pt-3 justify-content-between">
+                            <p class="fs-5 fw-bold">Messaggio inviato</p>
+                            <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
+                        </div>
+
+                        <div class="col-4 m-5 your-message bg-white d-flex pt-3 justify-content-between">
+                            <p class="fs-5 fw-bold">Messaggio ricevuto</p>
+                            <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
                         </div>
                     </main>
-                    <footer class="row bord-black ">
+                    <footer class="row">
                         <div class="col-12 flex-shrink-1 footer-message">
-                            <div class="row">
-                                <div class="col-2 bord-black">
-                                    wfwfwfwfw
+                            <div class="row p-3 align-items-center">
+                                <div class="text-center col-1 ">
+                                    <i class="fs-3 text-black-50 far fa-smile"></i>
                                 </div>
-                                <div class="col-8 bord-black">
-                                    wfwfwfwfw
+                                <div class="col-10 ">
+                                    <input type="text" placeholder="Scrivi un messaggio" class="w-100 p-3 border-0">
                                 </div>
-                                <div class="col-2 bord-black">
-                                    wfwfwfwfw
+                                <div class="text-center col-1 ">
+                                    <i class="fs-3 text-black-50 fas fa-microphone"></i>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,3 @@
-/* UTILITIES */
-.bord-black{
-    border: 1px solid black;
-}
 /* GENERAL */
 body {
     height: 100vh;
@@ -12,9 +8,9 @@ body {
         #dfe0d9 15%,
         #dfe0d9 100%
     );
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+i{
+    cursor: pointer;
 }
 /*  */
 
@@ -51,4 +47,20 @@ body {
 .chat{
     background-image: url('../img/mine.jpg');
 }
+main .my-message{
+    background-color: #ddfabf;
+    border-radius: 15px;
+}
+main .your-message{
+    border-radius: 15px;
+}
 /* FOOTER */
+footer{
+    background-color: #f4f0ed;
+}
+footer input{
+    border-radius: 20px;
+}
+p{
+    margin-top: auto;
+}
