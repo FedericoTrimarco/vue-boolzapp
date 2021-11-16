@@ -1,4 +1,7 @@
 /* GENERAL */
+*{
+    font-family: 'Lato', sans-serif;
+}
 body {
     height: 100vh;
     background-image: linear-gradient(
@@ -39,8 +42,8 @@ i{
     border: none;
     padding: 5px 40px;
 }
-/* USERS */
-.users img{
+/* CONTACTS */
+.contacts img{
     width: 15%;
 }
 /* MAIN */
@@ -64,3 +67,4 @@ footer input{
 p{
     margin-top: auto;
 }
+/* HOVER */

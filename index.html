@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT-FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
     <!-- VUE.JS -->
@@ -14,7 +17,6 @@
     <!-- MY CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>BOOLZAP</title>
-</head>
 </head>
 <body class="d-flex justify-content-center align-items-center">
         <!-- GENERAL CONTAINER -->
@@ -26,7 +28,7 @@
                     <div class="row">
                         <div class="col-6  d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
-                            <h4>Federico Trimarco</h3>
+                            <h4 class="fw-bold">Federico Trimarco</h4>
                         </div>
                         <div class="text-black-50 col-6  d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-circle-notch"></i>
@@ -49,21 +51,21 @@
                             <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
                         </div>
                     </div>
-                    <ul class="row users flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
-                        <li v-for="(contact, index) in contacts" class="col-12  border-bottom d-flex align-items-center p-3">
+                    <ul class="row contacts flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
+                        <li v-for="(contact, index) in contacts" class="col-12 border-bottom d-flex align-items-center p-3">
                             <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
-                            <h4>{{contact.name}}</h3>
+                            <h4 class="fw-bold">{{contact.name}}</h4>
                         </li>
                     </ul>
                     
                 </aside>
                             <!-- MAIN -->
-                <section class="col-8  d-flex flex-column h-100">
+                <main class="col-8  d-flex flex-column h-100">
                     <header class="row">
                         <div class="col-3  d-flex align-items-center p-3">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_1.jpg" alt="Michele">
                             <div class="ms-2 notification-text-icon">
-                               <h4>{{contacts[0].name}}</h5>
+                               <h4 class="fw-bold">{{contacts[0].name}}</h4>
                                <span class="text-black-50 fw-bold">{{contacts[0].messages[0].date}}</span>
                             </div>
                         </div>
@@ -73,7 +75,7 @@
                             <i class="fs-4 fas fa-ellipsis-v"></i>
                         </div>
                     </header>
-                    <main class="row flex-column flex-grow-1 overflow-auto chat">
+                    <section class="row flex-column flex-grow-1 overflow-auto chat">
                         <div class="col-4 align-self-end m-5 my-message d-flex pt-3 justify-content-between">
                             <p class="fs-5 fw-bold">Messaggio inviato</p>
                             <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
@@ -83,7 +85,7 @@
                             <p class="fs-5 fw-bold">Messaggio ricevuto</p>
                             <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
                         </div>
-                    </main>
+                    </section>
                     <footer class="row">
                         <div class="col-12 flex-shrink-1 footer-message">
                             <div class="row p-3 align-items-center">
@@ -99,7 +101,7 @@
                             </div>
                         </div>
                     </footer>
-                </section>
+                </main>
             </div>
         </div>
         
