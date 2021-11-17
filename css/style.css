@@ -54,12 +54,11 @@ i{
 .chat{
     background-image: url('../img/mine.jpg');
 }
-main .my-message{
-    background-color: #ddfabf;
+.message{
     border-radius: 15px;
 }
-main .your-message{
-    border-radius: 15px;
+main .message.sent{
+    background-color: #ddfabf;
 }
 /* FOOTER */
 footer{
