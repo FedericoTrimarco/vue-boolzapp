@@ -21,6 +21,8 @@ i{
 .container-w-app{
     height: 95%;
     width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
 }
 /* PROFILE */
 .profile, .chat-header, .notifications{
