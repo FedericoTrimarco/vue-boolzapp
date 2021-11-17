@@ -93,11 +93,12 @@ const wApp = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
-        randomAnswers: ['we fratm come stai?','tvb','ci siam passati un pò tutti']
+        randomAnswers: ['we fratm come stai?','tvb','ci siam passati un pò tutti','voglio i pan di stelle', 'ti va un pò di tailwind? Solo io e te ;)', 'andiamo a vedere Spider-Man No Way Home il 15 Dicembre, non prendere impegni','andiamo da GameStop a prenotare Elden Ring!']
     },
     methods: {
         setContact(index){
             this.activeContact = index;
+            this.scrollToBottom();
         },
         addNewMessage(){
 
@@ -118,17 +119,20 @@ const wApp = new Vue({
                     this.contacts[this.activeContact].messages.push(
                         {
                             date: this.date(),
-                            text: 'ok',
+                            text: this.randomAnswers[this.getRandomNum(this.randomAnswers)],
                             status: 'received'
                         });
                         this.scrollToBottom();
-                }, 1000);
+                }, 500);
                  
             }
         },
         date(){
             const now = dayjs().format('DD/MM/YYYY HH:mm:ss');
             return now;
+        },
+        getRandomNum( array ) {
+            return Math.floor( Math.random() * array.length );
         },
         scrollToBottom() {
             setTimeout(()=>{
