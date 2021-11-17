@@ -93,7 +93,7 @@ const wApp = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
-        randomAnswers: ['we fratm come stai?','tvb','ci siam passati un pò tutti','voglio i pan di stelle', 'ti va un pò di tailwind? Solo io e te ;)', 'andiamo a vedere Spider-Man No Way Home il 15 Dicembre, non prendere impegni','andiamo da GameStop a prenotare Elden Ring!']
+        randomAnswers: ['we fratm come stai?','non rompere','ci siam passati un pò tutti','voglio i pan di stelle', 'ti va un pò di tailwind? Solo io e te ;)', 'andiamo a vedere Spider-Man No Way Home il 15 Dicembre, non prendere impegni','andiamo da GameStop a prenotare Elden Ring!','solita situation','sono impegnato','ti scrivo dopo']
     },
     methods: {
         setContact(index){
