@@ -22,7 +22,11 @@ i{
     height: 95%;
     width: 80%;
 }
-
+/* PROFILE */
+.profile, .chat-header, .notifications{
+    height: 100px;
+    padding: 0 10px;
+}
 /* NOTIFICATION */
 .notifications{
     background-color: #a2dffe;
@@ -63,9 +67,6 @@ footer{
 }
 footer input{
     border-radius: 20px;
-}
-p{
-    margin-top: auto;
 }
 
 /**** HOVER ****/

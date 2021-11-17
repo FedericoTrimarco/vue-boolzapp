@@ -26,20 +26,20 @@
                              <!-- ASIDE -->
                 <aside class="col-4 h-100 border-end d-flex flex-column">
                            <!-- my profile -->
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center p-3">
+                    <div class="row profile">
+                        <div class="col-6 brd-black d-flex align-items-center">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_io.jpg" alt="Federico Trimarco">
                             <h4 class="fw-bold">Federico Trimarco</h4>
                         </div>
-                        <div class="text-black-50 col-6  d-flex justify-content-end align-items-center">
+                        <div class="text-black-50 col-6 d-flex justify-content-end align-items-center brd-black">
                             <i class="fs-4 fas fa-circle-notch"></i>
                             <i class="fs-4 mx-4 fas fa-comment-alt"></i>
-                            <i class="fs-4 fas fa-ellipsis-v"></i>
+                            <i class="fs-4 fas fa-ellipsis-v me-4"></i>
                         </div>
                     </div>
                            <!-- notifications -->
                     <div class="row notifications">
-                        <div class="col-12 d-flex align-items-center p-3">
+                        <div class="col-12 d-flex align-items-center">
                             <i class="bg-light rounded-circle fs-2 fas fa-bell-slash"></i>
                             <div class="ms-2 notification-text-icon">
                                 <h5>Ricevi notifiche di nuovi messaggi</h5>
@@ -64,20 +64,20 @@
                     
                 </aside>
                             <!-- MAIN -->
-                <main class="col-8  d-flex flex-column h-100">
+                <main class="col-8 h-100 d-flex flex-column">
                         <!-- chat-header -->
-                    <header class="row">
-                        <div class="col-3  d-flex align-items-center p-3">
+                    <header class="row chat-header">
+                        <div class="col-3 d-flex align-items-center">
                             <img class="w-25 rounded-circle me-2" src="./img/avatar_1.jpg" alt="Michele">
-                            <div class="ms-2 notification-text-icon">
-                               <h4 class="fw-bold">{{contacts[0].name}}</h4>
-                               <span class="text-black-50 fw-bold">{{contacts[0].messages[0].date}}</span>
+                            <div class="ms-2">
+                                <h4 class="fw-bold">Michele</h4>
+                                <span class="text-black-50 fw-bold">{{contacts[0].messages[0].date}}</span>
                             </div>
                         </div>
-                        <div class="col-9 text-black-50  d-flex justify-content-end align-items-center">
+                        <div class="col-9 text-black-50 d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-search"></i>
                             <i class="fs-4 mx-4 fas fa-paperclip"></i>
-                            <i class="fs-4 fas fa-ellipsis-v"></i>
+                            <i class="fs-4 fas fa-ellipsis-v me-4"></i>
                         </div>
                     </header>
                         <!-- chat-section -->
