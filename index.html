@@ -29,8 +29,8 @@
                     <div class="row profile">
                         <div class="col-6 brd-black d-flex align-items-center">
                             <img 
-                                class="w-25 rounded-circle me-2" 
-                                :src="`./img/avatar${myProfile.avatar}.jpeg`" 
+                                class="w-25 rounded-circle me-2"
+                                :src="`./img/avatar${myProfile.avatar}.jpeg`"
                                 :alt="`./img/avatar${myProfile.name}.jpeg`"
                             >
                             <h4 class="fw-bold">{{myProfile.name}}</h4>
@@ -64,14 +64,14 @@
                             <!-- list-contacts -->
                     <ul class="row contacts flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
                         <li 
-                            v-for="(contact, index) in contacts" 
+                            v-for="(contact, index) in contacts"
                             class="contact col-12 border-bottom d-flex align-items-center p-3"
                             :class="{active: index === activeContact}"
                             @click="setContact(index)"
                         >
                             <img 
-                                class="rounded-circle me-3" 
-                                :src="`./img/avatar${contact.avatar}.jpg`" 
+                                class="rounded-circle me-3"
+                                :src="`./img/avatar${contact.avatar}.jpg`"
                                 :alt="`${contact.name}`"
                             >
                             <h4 class="fw-bold">{{contact.name}}</h4>
@@ -85,8 +85,8 @@
                     <header class="row chat-header flex-shrink-0">
                         <div class="col-3 d-flex align-items-center">
                             <img 
-                                class="w-25 rounded-circle me-2" 
-                                :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" 
+                                class="w-25 rounded-circle me-2"
+                                :src="`./img/avatar${contacts[activeContact].avatar}.jpg`"
                                 :alt="`${contacts[activeContact].name}`"
                             >
                             <div class="ms-2">
