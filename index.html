@@ -83,18 +83,18 @@
                 <main class="col-8 h-100 d-flex flex-column">
                         <!-- chat-header -->
                     <header class="row chat-header flex-shrink-0">
-                        <div class="col-3 d-flex align-items-center">
+                        <div class="col-4 d-flex align-items-center h-100">
                             <img 
-                                class="w-25 rounded-circle me-2"
+                                class="h-75 rounded-circle me-2"
                                 :src="`./img/avatar${contacts[activeContact].avatar}.jpg`"
                                 :alt="`${contacts[activeContact].name}`"
                             >
                             <div class="ms-2">
                                 <h4 class="fw-bold">{{contacts[activeContact].name}}</h4>
-                                <span class="text-black-50 fw-bold">Ultimo accesso</span>
+                                <span class="text-black-50 fw-bold">Ultimo accesso: {{ date() }}</span>
                             </div>
                         </div>
-                        <div class="col-9 text-black-50 d-flex justify-content-end align-items-center">
+                        <div class="col-8 text-black-50 d-flex justify-content-end align-items-center">
                             <i class="fs-4 fas fa-search"></i>
                             <i class="fs-4 mx-4 fas fa-paperclip"></i>
                             <i class="fs-4 fas fa-ellipsis-v me-4"></i>
