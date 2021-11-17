@@ -1,7 +1,11 @@
 const wApp = new Vue({
     el: '.container-w-app',
     data:{
-        activeContact : 0,
+        myProfile: {
+            name: 'Federico Trimarco',
+            avatar: '_io',
+            visible: true,
+        },
         contacts: [
             {
                 name: 'Michele',
@@ -86,11 +90,51 @@ const wApp = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        activeContact: 0,
+        newMessage: '',
+        randomAnswers: ['we fratm come stai?','tvb','ci siam passati un pò tutti']
     },
     methods: {
         setContact(index){
             this.activeContact = index;
         },
+        addNewMessage(){
+
+            if(this.newMessage != ''){
+                
+                this.contacts[this.activeContact].messages.push(
+                    {
+                        date: this.date(),
+                        text: this.newMessage,
+                        status: 'sent'
+                    }
+                );
+
+                this.scrollToBottom();
+                this.newMessage = '';
+
+                setTimeout(()=> {
+                    this.contacts[this.activeContact].messages.push(
+                        {
+                            date: this.date(),
+                            text: 'ok',
+                            status: 'received'
+                        });
+                        this.scrollToBottom();
+                }, 1000);
+                 
+            }
+        },
+        date(){
+            const now = dayjs().format('DD/MM/YYYY HH:mm:ss');
+            return now;
+        },
+        scrollToBottom() {
+            setTimeout(()=>{
+                this.$refs.chatScreen.scrollTop = this.$refs.chatScreen.scrollHeight;
+
+            },1)
+        }
     },
 });

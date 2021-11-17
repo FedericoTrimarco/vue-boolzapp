@@ -50,6 +50,9 @@ i{
 .contacts img{
     width: 15%;
 }
+.contacts .contact.active{
+    background-color: rgb(241, 236, 236);
+}
 /* MAIN */
 .chat{
     background-image: url('../img/mine.jpg');
@@ -74,6 +77,9 @@ footer input{
 }
 
 /**** HOVER ****/
+.contacts .contact{
+    transition: background-color .3s;
+}
 .contacts .contact:hover{
-    background-color: #ccc;
+    background-color: rgb(241, 236, 236);
 }
