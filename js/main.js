@@ -123,7 +123,7 @@ const wApp = new Vue({
                             status: 'received'
                         });
                         this.scrollToBottom();
-                }, 500);
+                }, 1000);
                  
             }
         },
