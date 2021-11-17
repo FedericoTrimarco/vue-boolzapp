@@ -28,7 +28,11 @@
                            <!-- my profile -->
                     <div class="row profile">
                         <div class="col-6 brd-black d-flex align-items-center">
-                            <img class="w-25 rounded-circle me-2" :src="`./img/avatar${myProfile.avatar}.jpeg`" :alt="`./img/avatar${myProfile.name}.jpeg`">
+                            <img 
+                                class="w-25 rounded-circle me-2" 
+                                :src="`./img/avatar${myProfile.avatar}.jpeg`" 
+                                :alt="`./img/avatar${myProfile.name}.jpeg`"
+                            >
                             <h4 class="fw-bold">{{myProfile.name}}</h4>
                         </div>
                         <div class="text-black-50 col-6 d-flex justify-content-end align-items-center brd-black">
@@ -50,7 +54,10 @@
                             <!-- search -->
                     <div class="row search py-3">
                         <div class="col-12 p-2 d-flex">
-                            <button class="bg-white border border-1"><i class="fas fa-search"></i></button>
+                            <button class="bg-white border border-1">
+                                <i class="fas fa-search"></i>
+                            </button>
+
                             <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
                         </div>
                     </div>
@@ -61,7 +68,11 @@
                             :class="{active: index === activeContact}"
                             @click="setContact(index)"
                         >
-                            <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
+                            <img 
+                                class="rounded-circle me-3" 
+                                :src="`./img/avatar${contact.avatar}.jpg`" 
+                                :alt="`${contact.name}`"
+                            >
                             <h4 class="fw-bold">{{contact.name}}</h4>
                         </li>
                     </ul>
@@ -73,10 +84,13 @@
                     <header class="row chat-header flex-shrink-0">
                         <div class="col-3 d-flex align-items-center">
                             <img 
-                                  class="w-25 rounded-circle me-2" :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" :alt="`${contacts[activeContact].name}`">
+                                class="w-25 rounded-circle me-2" 
+                                :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" 
+                                :alt="`${contacts[activeContact].name}`"
+                            >
                             <div class="ms-2">
                                 <h4 class="fw-bold">{{contacts[activeContact].name}}</h4>
-                                <span class="text-black-50 fw-bold">{{contacts[activeContact].messages[1].date}}</span>
+                                <span class="text-black-50 fw-bold">Ultimo accesso</span>
                             </div>
                         </div>
                         <div class="col-9 text-black-50 d-flex justify-content-end align-items-center">
@@ -91,7 +105,7 @@
                             class="row flex-column flex-grow-1 flex-nowrap overflow-auto chat p-5">
                         <!-- message-sent && message-received -->
                         <div v-for="(message, index) in contacts[activeContact].messages"
-                             class="message col-4 d-flex pt-3 justify-content-between"
+                             class="message col-4 d-flex flex-column pt-3"
                              :class="message.status"
                         >
                             <p class="fs-5 fw-bold">{{message.text}}</p>
