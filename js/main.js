@@ -1,6 +1,7 @@
 const wApp = new Vue({
     el: '.container-w-app',
     data:{
+        activeContact : 0,
         contacts: [
             {
                 name: 'Michele',
@@ -45,7 +46,8 @@ const wApp = new Vue({
                         status: 'sent'
                     }
                 ],
-            },	{
+            },
+            {
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
@@ -85,6 +87,10 @@ const wApp = new Vue({
                 ],
             },
         ]
-        
+    },
+    methods: {
+        setContact(index){
+            this.activeContact = index;
+        },
     },
 });

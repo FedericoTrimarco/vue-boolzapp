@@ -56,7 +56,11 @@
                     </div>
                             <!-- list-contacts -->
                     <ul class="row contacts flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
-                        <li v-for="(contact, index) in contacts" class="contact col-12 border-bottom d-flex align-items-center p-3">
+                        <li v-for="(contact, index) in contacts" 
+                            class="contact col-12 border-bottom d-flex align-items-center p-3"
+                            :class="{active: index === activeContact}"
+                            @click="setContact(index)"
+                        >
                             <img class="rounded-circle me-3" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
                             <h4 class="fw-bold">{{contact.name}}</h4>
                         </li>
@@ -68,10 +72,11 @@
                         <!-- chat-header -->
                     <header class="row chat-header">
                         <div class="col-3 d-flex align-items-center">
-                            <img class="w-25 rounded-circle me-2" src="./img/avatar_1.jpg" alt="Michele">
+                            <img 
+                                  class="w-25 rounded-circle me-2" :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" :alt="`${contacts[activeContact].name}`">
                             <div class="ms-2">
-                                <h4 class="fw-bold">Michele</h4>
-                                <span class="text-black-50 fw-bold">{{contacts[0].messages[0].date}}</span>
+                                <h4 class="fw-bold">{{contacts[activeContact].name}}</h4>
+                                <span class="text-black-50 fw-bold">{{contacts[activeContact].messages[1].date}}</span>
                             </div>
                         </div>
                         <div class="col-9 text-black-50 d-flex justify-content-end align-items-center">
@@ -81,16 +86,14 @@
                         </div>
                     </header>
                         <!-- chat-section -->
-                    <section class="row flex-column flex-grow-1 overflow-auto chat">
+                    <section class="row flex-column flex-grow-1 overflow-auto chat p-5">
                         <!-- message-sent -->
-                        <div class="col-4 align-self-end m-5 message sent d-flex pt-3 justify-content-between">
-                            <p class="fs-5 fw-bold">Messaggio inviato</p>
-                            <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
-                        </div>
-                        <!-- message-received -->
-                        <div class="col-4 m-5 message bg-white d-flex pt-3 justify-content-between">
-                            <p class="fs-5 fw-bold">Messaggio ricevuto</p>
-                            <span class="text-black-50 align-self-end">{{contacts[0].messages[0].date}}</span>
+                        <div v-for="(message, index) in contacts[activeContact].messages"
+                             class="message col-4 d-flex pt-3 justify-content-between"
+                             :class="message.status"
+                        >
+                            <p class="fs-5 fw-bold">{{message.text}}</p>
+                            <span class="text-black-50 align-self-end">{{message.date}}</span>
                         </div>
                     </section>
                     <!-- chat-footer -->

@@ -56,9 +56,14 @@ i{
 }
 .message{
     border-radius: 15px;
+    margin: 20px 70px;
 }
 main .message.sent{
+    align-self: flex-end;
     background-color: #ddfabf;
+}
+main .message.received{
+    background-color: white;
 }
 /* FOOTER */
 footer{
