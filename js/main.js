@@ -93,6 +93,7 @@ const wApp = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
+        searchInput: '',
         randomAnswers: ['we fratm come stai?','non rompere','ci siam passati un pò tutti','voglio i pan di stelle', 'ti va un pò di tailwind? Solo io e te ;)', 'andiamo a vedere Spider-Man No Way Home il 15 Dicembre, non prendere impegni','andiamo da GameStop a prenotare Elden Ring!','solita situation','sono impegnato','ti scrivo dopo']
     },
     methods: {
@@ -139,6 +140,15 @@ const wApp = new Vue({
                 this.$refs.chatScreen.scrollTop = this.$refs.chatScreen.scrollHeight;
 
             },1)
+        },
+        search(){
+           this.contacts.forEach((contact) => {
+               if(!contact.name.toLowerCase().includes(this.searchInput.toLowerCase())){
+                    contact.visible = false;
+               } else {
+                    contact.visible = true;
+               }
+           });
         }
     },
 });
