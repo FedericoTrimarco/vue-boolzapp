@@ -29,7 +29,7 @@
                              <!-- ASIDE -->
                 <aside class="col-4 h-100 border-end d-flex flex-column">
                            <!-- my profile -->
-                    <div class="row profile">
+                    <div class="row profile flex-shrink-0">
                         <div class="col-6 brd-black d-flex align-items-center">
                             <img 
                                 class="w-25 rounded-circle me-2"
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                            <!-- notifications -->
-                    <div class="row notifications">
+                    <div class="row notifications flex-shrink-0">
                         <div class="col-12 d-flex align-items-center">
                             <i class="bg-light rounded-circle fs-2 fas fa-bell-slash"></i>
                             <div class="ms-2 notification-text-icon">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                             <!-- list-contacts -->
-                    <ul class="row contacts flex-column flex-nowrap flex-grow-1 overflow-auto list-unstyled">
+                    <ul class="row contacts overflow-auto list-unstyled">
                         <li 
                             v-for="(contact, index) in contacts"
                             class="contact col-12 border-bottom d-flex align-items-center p-3"
@@ -121,7 +121,7 @@
                     </section>
                     <!-- chat-footer -->
                     <footer class="row">
-                        <div class="col-12 flex-shrink-1 footer-message">
+                        <div class="col-12 flex-shrink-0 footer-message">
                             <div class="row p-3 align-items-center">
                                 <!-- icon-left -->
                                 <div class="text-center col-1 ">
@@ -137,7 +137,7 @@
                                     >
                                 </div>
                                 <!-- icon-right -->
-                                <div class="text-center col-1 ">
+                                <div class="text-center col-1">
                                     <i class="fs-3 text-black-50 fas fa-microphone"></i>
                                 </div>
                             </div>
