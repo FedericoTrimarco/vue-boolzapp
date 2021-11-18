@@ -61,7 +61,7 @@
                                 <i class="fas fa-search"></i>
                             </button>
 
-                            <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white">
+                            <input type="text" placeholder="cerca e inizia una nuova chat" class="border border-1 flex-grow-1 bg-white" v-model.trim="searchInput" @keyup="search">
                         </div>
                     </div>
                             <!-- list-contacts -->
@@ -70,6 +70,7 @@
                             v-for="(contact, index) in contacts"
                             class="contact col-12 border-bottom d-flex align-items-center p-3"
                             :class="{active: index === activeContact}"
+                            v-if="contact.visible"
                             @click="setContact(index)"
                         >
                             <img 
@@ -94,7 +95,7 @@
                             >
                             <div class="ms-2">
                                 <h4 class="fw-bold">{{contacts[activeContact].name}}</h4>
-                                <span class="text-black-50 fw-bold">Ultimo accesso: {{ date() }}</span>
+                                <span class="text-black-50 fw-bold">Ultimo accesso:</span>
                             </div>
                         </div>
                         <div class="col-8 text-black-50 d-flex justify-content-end align-items-center">
