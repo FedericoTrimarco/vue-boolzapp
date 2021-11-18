@@ -1,0 +1,88 @@
+/* GENERAL */
+*{
+    font-family: 'Lato', sans-serif;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #32a093 0%,
+        #32a093 15%,
+        #dfe0d9 15%,
+        #dfe0d9 100%
+    );
+}
+i{
+    cursor: pointer;
+}
+/*  */
+
+/* CONTAINER */
+.container-w-app{
+    height: 95%;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+/* PROFILE */
+.profile, .chat-header, .notifications{
+    height: 100px;
+    padding: 0 10px;
+}
+/* NOTIFICATION */
+.notifications{
+    background-color: #a2dffe;
+}
+.notifications i{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #a2dffe;
+}
+/* SEARCH */
+.search{
+    background-color: #fffbfb;
+}
+.search button{
+    border: none;
+    padding: 5px 40px;
+}
+/* CONTACTS */
+.contacts img{
+    width: 15%;
+}
+.contacts .contact.active{
+    background-color: rgb(241, 236, 236);
+}
+/* MAIN */
+.chat{
+    background-image: url('../img/mine.jpg');
+    scroll-behavior: smooth;
+}
+.message{
+    border-radius: 15px;
+    margin: 20px 70px;
+}
+main .message.sent{
+    align-self: flex-end;
+    background-color: #ddfabf;
+}
+main .message.received{
+    background-color: white;
+}
+/* FOOTER */
+footer{
+    background-color: #f4f0ed;
+}
+footer input{
+    border-radius: 20px;
+}
+
+/**** HOVER ****/
+.contacts .contact{
+    transition: background-color .3s;
+}
+.contacts .contact:hover{
+    background-color: rgb(241, 236, 236);
+}
