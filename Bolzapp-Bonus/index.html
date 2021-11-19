@@ -130,7 +130,7 @@
                                     <a 
                                         class="fs-5 text-dark fw-bold d-block" 
                                         href="#"
-                                        @click="contacts[activeContact].messages.splice(index, 1)"
+                                        @click="deleteMessage(index, 1)"
                                     >
                                         Elimina messaggio
                                     </a>
@@ -138,7 +138,7 @@
                                     <a 
                                         class="fs-5 text-dark fw-bold d-block" 
                                         href="#"
-                                        @click="contacts[activeContact].messages.splice(0)"
+                                        @click="deleteAllMessage"
                                     >
                                         Elimina tutti i messaggi
                                     </a>

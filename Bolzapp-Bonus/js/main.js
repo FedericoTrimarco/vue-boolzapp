@@ -160,5 +160,11 @@ const wApp = new Vue({
             this.setMessage = index;
             this.activeDropdown = !this.activeDropdown;
         },
+        deleteMessage(index, num){
+           this.contacts[this.activeContact].messages.splice(index, num)
+        },
+        deleteAllMessage(){
+            this.contacts[this.activeContact].messages.splice(0)
+         }
     },
 });
