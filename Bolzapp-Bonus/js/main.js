@@ -92,6 +92,8 @@ const wApp = new Vue({
             },
         ],
         activeContact: 0,
+        setMessage: 0,
+        activeDropdown: false,
         newMessage: '',
         searchInput: '',
         randomAnswers: ['we fratm come stai?','non rompere','ci siam passati un pò tutti','voglio i pan di stelle', 'ti va un pò di tailwind? Solo io e te ;)', 'andiamo a vedere Spider-Man No Way Home il 15 Dicembre, non prendere impegni','andiamo da GameStop a prenotare Elden Ring!','solita situation','sono impegnato','ti scrivo dopo']
@@ -149,6 +151,11 @@ const wApp = new Vue({
                     contact.visible = true;
                }
            });
-        }
+        },
+        dropdownActive(index){
+            this.setMessage = index;
+            console.log(this.setMessage);
+            this.activeDropdown = !this.activeDropdown;
+        },
     },
 });

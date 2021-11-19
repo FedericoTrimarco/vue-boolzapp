@@ -112,6 +112,6 @@ footer input{
 .dropdown a:hover{
     text-decoration: underline;
 }
-.arrow-dropdown:hover .dropdown{
+.arrow-dropdown.active .dropdown{
     display: block;
 }
