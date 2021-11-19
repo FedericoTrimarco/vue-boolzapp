@@ -112,11 +112,31 @@
                         <!-- message-sent && message-received -->
                         <div 
                             v-for="(message, index) in contacts[activeContact].messages"
-                            class="message col-4 d-flex flex-column pt-3"
+                            class="message col-4 d-flex flex-column pt-3 px-4 position-relative"
                             :class="message.status"
+                            ref="lello"
+                            
                         >
                             <p class="fs-5 fw-bold">{{message.text}}</p>
                             <span class="text-black-50 align-self-end">{{message.date}}</span>
+                            <i class="arrow-dropdown text-black-50 fas fa-chevron-down" tabindex="0">
+                                <div class="dropdown">
+                                    <a 
+                                        class="fs-5 text-dark fw-bold d-block" 
+                                        href="#"
+                                        @click="contacts[activeContact].messages.splice(index, 1)"
+                                    >
+                                        Elimina messaggio
+                                    </a>
+                                    <a 
+                                        class="fs-5 text-dark fw-bold d-block" 
+                                        href="#"
+                                        @click="contacts[activeContact].messages.splice(0)"
+                                    >
+                                        Elimina tutti i messaggi
+                                    </a>
+                                </div>
+                            </i>
                         </div>
                     </section>
                     <!-- chat-footer -->
