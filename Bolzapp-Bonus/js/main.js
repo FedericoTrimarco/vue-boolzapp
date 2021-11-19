@@ -92,7 +92,7 @@ const wApp = new Vue({
             },
         ],
         activeContact: 0,
-        setMessage: 0,
+        setMessage: null,
         activeDropdown: false,
         newMessage: '',
         searchInput: '',
@@ -100,6 +100,7 @@ const wApp = new Vue({
     },
     methods: {
         setContact(index){
+            this.setMessage = null;
             this.activeContact = index;
             this.scrollToBottom();
         },
