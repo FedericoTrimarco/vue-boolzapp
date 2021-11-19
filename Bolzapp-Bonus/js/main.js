@@ -134,6 +134,10 @@ const wApp = new Vue({
             const now = dayjs().format('DD/MM/YYYY HH:mm:ss');
             return now;
         },
+        hours(){
+            const currentTime = dayjs().format('HH:mm');
+            return currentTime;
+        },
         getRandomNum( array ) {
             return Math.floor( Math.random() * array.length );
         },
@@ -154,7 +158,6 @@ const wApp = new Vue({
         },
         dropdownActive(index){
             this.setMessage = index;
-            console.log(this.setMessage);
             this.activeDropdown = !this.activeDropdown;
         },
     },
